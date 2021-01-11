@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Actor} from '../../model/actor.class';
-import {ActorService} from '../../../service/actor.service';
+import {ActorService} from 'c:/repos-08-2020/angular/bmdb/srv/app/service/actor.service';
 
 @Component({
   selector: 'app-actor-list',
