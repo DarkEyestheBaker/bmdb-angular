@@ -18,4 +18,9 @@ export class MovieService {
     console.log("movieSvc.getAll()..."+URL);
     return this.http.get(URL+'/') as Observable<Movie[]>;
   }
+
+  //create/add movie
+  create(movie: Movie): Observable<Movie> {
+    return this.http.post(URL+'/', movie) as Observable<Movie>;
+  }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Actor} from '../model/actor.class';
+import { Actor } from '../model/actor.class';
 
 const URL = 'http://localhost:8080/actors';
 
@@ -17,5 +17,10 @@ export class ActorService {
     getAll(): Observable<Actor[]> {
         console.log("actorSvc.getAll()..."+URL);
         return this.http.get(URL+'/') as Observable<Actor[]>;
+    }
+
+    //create/add an actor
+    create(actor: Actor): Observable<Actor> {
+        return this.http.post(URL+'/', actor) as Observable<Actor>;
     }
 }

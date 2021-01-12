@@ -1,25 +1,27 @@
+<app-menu></app-menu>
 <section class = "heading">
     <span class = "page-title font-weight-bold font italic"> [{{title}}]</span>
+    <a routerLink='/actor-create'>
+        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+    </a>
 </section>
 <table class="table table-sm table-striped">
     <thead>
         <tr>
             <th>ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Name</th>
             <th>Gender</th>
-            <th>Birthdate</th>
+            <th>Birth Date</th>
             <th>Action</th>
         </tr>
     </thead>
     <body>
         <tr *ngFor='let actor of actors'>
             <td>{{actor.id}}</td>
-            <td>{{actor.firstName}}</td>
-            <td>{{actor.lastName}}</td>
+            <td>{{actor.lastName + ", " + actor.firstName}}</td>
             <td>{{actor.gender}}</td>
             <td>{{actor.birthDate}}</td>
             <td>Detail | Edit</td>
         </tr>
     </body>
-</table>
+</table> 

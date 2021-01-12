@@ -3,10 +3,10 @@ export class Actor {
     firstName: string;
     lastName: string;
     gender: string;
-    birthDate: string;
+    birthDate: Date;
 
     //only ONE constructor in javascript
-    constructor(id: number = 0, firstName = '', lastName = '', gender = '', birthDate = '')
+    constructor(id: number = 0, firstName: string = '', lastName: string = '', gender: string = '', birthDate: Date = null)
     {
     this.id = id;
     this.firstName = firstName;
