@@ -26,5 +26,4 @@ export class ActorListComponent implements OnInit {
     )
   };
 
-
 }

@@ -11,7 +11,7 @@
             <th>ID</th>
             <th>Title</th>
             <th>Year</th>
-            <th>Action</th>
+            <th>Detail | Edit</th>
         </tr>
     </thead>
     <tbody>
@@ -19,7 +19,13 @@
             <td>{{movie.id}}</td>
             <td>{{movie.title}}</td>
             <td>{{movie.year}}</td>
-            <td>Detail | Edit</td>
+            <td>
+                <a routerLink='/movie-detail/{{movie.id}}'>
+                    <img width='20' height='20' src='assets/details.png' title='Movie Details'></a>  | 
+                    <a routerLink='/movie-edit/{{movie.id}}'>
+                    <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Edit'>
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>
