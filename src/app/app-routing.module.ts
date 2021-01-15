@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'movie-create', component: MovieCreateComponent},
   { path: 'movie-detail/:id', component: MovieDetailComponent},
   { path: 'movie-edit/:id', component: MovieEditComponent},
+  
   { path: '', redirectTo: 'actor-list', pathMatch: 'full'},
   { path: 'actor-list', component: ActorListComponent},
   { path: 'actor-create', component: ActorCreateComponent},
