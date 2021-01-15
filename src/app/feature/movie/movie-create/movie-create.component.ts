@@ -13,7 +13,8 @@ export class MovieCreateComponent implements OnInit {
   movie: Movie = new Movie();
   submitBtnTitle = "Create"; 
 
-  constructor(private movieSvc: MovieService, private router: Router) { }
+  constructor(private movieSvc: MovieService, 
+              private router: Router) { }
 
   ngOnInit(): void {
   

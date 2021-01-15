@@ -20,7 +20,7 @@ constructor(private movieSvc: MovieService,
             private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // get the id from the url  
+    // get the ID from the URL  
     this.route.params.subscribe(
         parms => {this.movieID = parms['id'];
         console.log(this.movieID);

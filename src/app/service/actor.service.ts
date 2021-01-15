@@ -13,14 +13,25 @@ export class ActorService {
     constructor(private http: HttpClient) {}
 
     //service functions
-    //getAll actors
+        //getAll actors
     getAll(): Observable<Actor[]> {
         console.log("actorSvc.getAll()..."+URL);
         return this.http.get(URL+'/') as Observable<Actor[]>;
     }
-
-    //create/add an actor
+        //create/add an actor
     create(actor: Actor): Observable<Actor> {
         return this.http.post(URL+'/', actor) as Observable<Actor>;
     }
+        //get actor by ID
+    getById(id): Observable<Actor> {
+            return this.http.get(URL + '/' + id) as Observable<Actor>;
+        }
+        //Update Actor
+    update(actor: Actor): Observable<Actor> {
+            return this.http.put(URL + '/', actor) as Observable<Actor>;
+        }
+        //delete actor by ID
+    delete(id): Observable<Actor> {
+        return this.http.delete(URL+'/' + id) as Observable<Actor>;
+}
 }

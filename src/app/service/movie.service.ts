@@ -13,28 +13,25 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   //service functions
-  //getAll movies
+    //getAll movies
   getAll(): Observable<Movie[]> {
     console.log("movieSvc.getAll()..."+URL);
     return this.http.get(URL+'/') as Observable<Movie[]>;
   }
-
-  //create/add movie
+    //create/add movie
   create(movie: Movie): Observable<Movie> {
     return this.http.post(URL+'/', movie) as Observable<Movie>;
   }
-
-  //get movie by ID
+   //get movie by ID
   getById(id): Observable<Movie> {
     return this.http.get(URL+'/' + id) as Observable<Movie>;
   }
-  //update movie
+    //update movie
   update(movie: Movie): Observable<Movie> {
     return this.http.put(URL+'/', movie) as Observable<Movie>;
   }
-//delete movie by ID
-delete(id): Observable<Movie> {
+    //delete movie by ID
+  delete(id): Observable<Movie> {
   return this.http.delete(URL+'/' + id) as Observable<Movie>;
 }
-
 }
