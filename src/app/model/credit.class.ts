@@ -1,11 +1,17 @@
+import { Actor } from "./actor.class";
+import { Movie } from "./movie.class";
+
 export class Credit {
     id: number;
-    actor: string;
-    movie: string;
+    actor: Actor;
+    movie: Movie;
     role: string;
 
     //only ONE constructor in javascript
-    constructor(id: number = 0, actor: string = '', movie: string = '', role: string = '')
+    constructor(id: number = 0, 
+                actor: Actor = new Actor, 
+                movie: Movie = new Movie, 
+                role: string = '')
     {
         this.id = id;
         this.actor = actor;

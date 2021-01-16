@@ -1,6 +1,9 @@
 <section class="heading">
-    <span class="page-title font-weight-bold font italic">[{{title}}]</span>
-</section>
+    <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+    <a routerLink='/movie-create'>
+        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+    </a>
+  </section>
 <table class="table table-sm table-striped">
     <thead>
         <tr>
@@ -13,11 +16,18 @@
     </thead>
     <body>
         <tr *ngFor='let credit of credits'>
-            <td>{{ID}}</td>
-            <td>{{Actor}}</td>
-            <td>{{Movie}}</td>
-            <td>{{Role}}</td>
+            <td>{{credit.id}}</td>
+            <td>{{credit.actor}}</td>
+            <td>{{credit.movie}}</td>
+            <td>{{credit.role}}</td>
             <td>Detail | Edit</td>
+            <td>
+                <a routerLink='/movie-detail/{{movie.id}}'>
+                    <img width='20' height='20' src='assets/details.png' title='Movie Details'></a>  | 
+                    <a routerLink='/movie-edit/{{movie.id}}'>
+                    <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Edit'>
+                </a>
+            </td>
         </tr>
     </body>
 </table>

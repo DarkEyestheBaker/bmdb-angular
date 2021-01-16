@@ -11,6 +11,7 @@ import { ActorService } from 'src/app/service/actor.service';
 export class ActorListComponent implements OnInit {
   title = 'Actor List';
   actors: Actor[] = [];
+  
   constructor(private actorSvc: ActorService) { }
 
   ngOnInit(): void {

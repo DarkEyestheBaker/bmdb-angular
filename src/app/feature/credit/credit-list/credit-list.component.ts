@@ -10,8 +10,7 @@ import { CreditService } from '../../../service/credit.service';
 export class CreditListComponent implements OnInit {
   title = 'Credit List'
   credits: Credit[] = [];
-
-
+ 
   constructor(private creditSvc: CreditService) { }
 
   ngOnInit(): void {
