@@ -10,10 +10,21 @@
                 <td>ID</td>
                 <td>{{actor.id}}</td>
             </tr>
-            <tr>
-                <td>Name:</td>
-                <td><input [(ngModel)]="actor.firstName" class="rounded" type="text" disabled></td>
-            </tr>
+            <tr><td>
+                First Name:
+            </td>
+            <td>
+                <input [(ngModel)]="actor.firstName" class="rounded" type="text">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                Last Name:
+            </td>
+            <td>
+                <input [(ngModel)]="actor.lastName" class="rounded" type="text">
+            </td>
+                
             <tr>
                 <td>Gender:</td>
                 <td><input [(ngModel)]="actor.gender" class="rounded" type="text" disabled></td>
@@ -22,10 +33,7 @@
                 <td>Birth Date:</td>
                 <td><input [(ngModel)]="actor.birthDate" class="rounded" type="text" disabled></td>
             </tr>
-            <tr>
-                <td>Action:</td>
-                <td><input [(ngModel)]="actor.action" class="rounded" type="text" disabled></td>
-            </tr>
+         
         </table>
     </main>
     <span>
