@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
-    <a routerLink='/credit-list'>
+    <a routerLink='/credit-create'>
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
   </section>
@@ -15,7 +15,7 @@
             <th>Action</th>
         </tr>
     </thead>
-    <body>
+    <tbody>
         <tr *ngFor='let credit of credits'>
             <td>{{credit.id}}</td>
             <td>{{credit.actor.lastName + ", " + credit.actor.firstName}}</td>
@@ -29,5 +29,5 @@
                 </a>
             </td>
         </tr>
-    </body>
+    </tbody>
 </table>

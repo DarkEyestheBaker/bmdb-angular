@@ -36,11 +36,12 @@ import { CreditDetailComponent } from './feature/credit/credit-detail/credit-det
     ActorEditComponent,
 
     CreditListComponent,
-    NoComponentDefinedComponent,
-    MenuComponent,
     CreditCreateComponent,
     CreditEditComponent,
-    CreditDetailComponent
+    CreditDetailComponent,
+    
+    NoComponentDefinedComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,40 +1,37 @@
 <app-menu></app-menu>
-<section class="heading">
-  <span class='component-title'>[{{title}}]</span>
-</section>
-<main class="single">
-  <table class="table table-sm">
-    <tr>
-      <td>
-          Actor:
-      </td>
-      <td>
-          <select [(ngModel)]="credit-detail.actor" class="rounded">
-            <option *ngFor='let actor of actors' [ngValue]='actor'>{{actor.lastName + ", "+ actor.firstName}}</option>
-          </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-          Movie:
-      </td>
-      <td>
-        <select [(ngModel)]="credit-detail.movie" class="rounded">
-          <option *ngFor='let movie of movies'  [ngValue]='movie'>{{movie.title + " ["+ movie.year+"]"}}</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>
-          Role:
-      </td>
-      <td>
-          <input [(ngModel)]="credit-detail.role" class="rounded" type="text">
-      </td>
-    </tr>
-  </table>
-</main>
-<span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> 
-<!--
-<span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
--->
+<div class="component">
+    <section class="heading">
+        <span class="page-title font-weight-bold font-italic">{{title}}</span>
+        <span>&nbsp;<a routerLink="/credit-list">Return to List</a></span>
+    </section>
+    <main *ngIf = 'credit' class="single">
+        <table class="table table-sm table-striped">
+            <tr>
+                <td>ID</td>
+                <td>{{credit.id}}</td>
+            </tr>
+            <tr>
+                <td>Actor Name:</td>
+                <td>
+                        <input [(ngModel)]="credit.actor.lastName + ', ' + credit.actor.firstName" class="rounded" type="text">
+                    </td>
+          </tr>
+          <tr>
+            <td>
+                Movie:
+            </td>
+            <td>
+                <input [(ngModel)]="credit.movie.title" class="rounded" type="text">
+            </td>
+            <tr>
+                <td>Role:</td>
+                <td><input [(ngModel)]="credit.role" class="rounded" type="text" disabled></td>
+            </tr>
+        
+        </table>
+    </main>
+    <span>
+        <span><button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
+    </span>
+</div>
+

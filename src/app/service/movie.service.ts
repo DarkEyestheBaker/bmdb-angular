@@ -13,6 +13,7 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   //service functions
+  
     //getAll movies
   getAll(): Observable<Movie[]> {
     console.log("movieSvc.getAll()..."+URL);

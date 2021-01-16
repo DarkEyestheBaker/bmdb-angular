@@ -13,12 +13,12 @@ import { MovieService } from 'src/app/service/movie.service';
   styleUrls: ['./credit-edit.component.css']
 })
 export class CreditEditComponent implements OnInit {
-  title = "Create Credit";
+  title = "Credit Edit";
   credit: Credit = null;
-  submitBtnTitle = "Edit"; 
   actors:  Actor[] = [];
   movies: Movie[] = [];
   creditId: number = 0;
+  submitBtnTitle = "Edit"; 
 
   constructor(private creditSvc: CreditService, 
               private actorSvc: ActorService,
@@ -40,9 +40,8 @@ export class CreditEditComponent implements OnInit {
         console.log(err);
       }
     );
+
     // 3) get list of actors
-
-
     this.actorSvc.getAll().subscribe(
       resp => {
         this.actors = resp as Actor[];

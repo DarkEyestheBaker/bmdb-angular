@@ -15,7 +15,7 @@
             <th>Action</th>
         </tr>
     </thead>
-    <body>
+    <tbody>
         <tr *ngFor='let actor of actors'>
             <td>{{actor.id}}</td>
             <td>{{actor.lastName + ", " + actor.firstName}}</td>
@@ -29,5 +29,5 @@
                 </a>
             </td>
         </tr>
-    </body>
+    </tbody>
 </table> 
