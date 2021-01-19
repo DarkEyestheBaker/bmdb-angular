@@ -16,6 +16,7 @@ import { CreditCreateComponent } from './feature/credit/credit-create/credit-cre
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
 import { CreditListComponent } from './feature/credit/credit-list/credit-list.component';
+import { UserLoginComponent } from './feature/user/user-login/user-login.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,8 @@ const routes: Routes = [
   { path: 'credit-create', component: CreditCreateComponent},
   { path: 'credit-detail/:id', component: CreditDetailComponent},
   { path: 'credit-edit/:id', component: CreditEditComponent},
+
+  { path: 'user-login', component: UserLoginComponent},
 
   { path: '**', component: NoComponentDefinedComponent}
 ];

@@ -5,8 +5,8 @@ nav {
 
 }
 ul {
-	padding: 0;
-	margin: 0;
+	padding: 5;
+	margin: 5;
 }
 li {
 	display: inline-block;
@@ -25,6 +25,6 @@ a:hover {
 }
 
 img {
-    max-width:4%;
-    max-height:4%;
+    max-width:8%;
+    max-height:8%;
 }

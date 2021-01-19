@@ -21,17 +21,17 @@ export class ActorService {
         //create/add an actor
     create(actor: Actor): Observable<Actor> {
         return this.http.post(URL+'/', actor) as Observable<Actor>;
-    }
+        }
         //get actor by ID
     getById(id): Observable<Actor> {
             return this.http.get(URL + '/' + id) as Observable<Actor>;
-        }
+            }
         //Update Actor
     update(actor: Actor): Observable<Actor> {
             return this.http.put(URL + '/', actor) as Observable<Actor>;
-        }
+            }
         //delete actor by ID
     delete(id): Observable<Actor> {
         return this.http.delete(URL+'/' + id) as Observable<Actor>;
-}
+    }
 }
