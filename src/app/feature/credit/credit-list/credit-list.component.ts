@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from 'src/app/service/system.service';
 import { Credit } from '../../../model/credit.class';
 import { CreditService } from '../../../service/credit.service';
 
@@ -11,9 +12,12 @@ export class CreditListComponent implements OnInit {
   title = 'Credit List'
   credits: Credit[] = [];
  
-  constructor(private creditSvc: CreditService) { }
+  constructor(private creditSvc: CreditService, 
+              private sysSvc: SystemService) { }
 
   ngOnInit(): void {
+    console.log('credit list: loggedInUser?', this.sysSvc.loggedInUser);
+
     //populate list of credits
     this.creditSvc.getAll().subscribe(
       resp => {
