@@ -8,10 +8,15 @@ export class User {
     email: String;
     collectionValue: number
   
-    constructor(id: number = 0, username: string = '',
-                password: string = '', firstName: string = '',
-                lastName: string = '', phoneNumber: string = '',
-                email: string = '', collectionValue: number = 0) {
+    constructor(id: number = 0, 
+                username: string = '',
+                password: string = '', 
+                firstName: string = '',
+                lastName: string = '', 
+                phoneNumber: string = '',
+                email: string = '', 
+                collectionValue: number = 0) {
+                  
       this.id = id;
       this.username = username;
       this.password = password;

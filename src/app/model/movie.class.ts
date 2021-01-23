@@ -6,7 +6,8 @@ export class Movie {
     director: string;
 
     // can only construct ONE constructor in javascript
-    constructor(id: number = 0, title: string = '', 
+    constructor(id: number = 0, 
+                title: string = '', 
                 year: number = 0, 
                 rating: string = '', 
                 director: string = '')

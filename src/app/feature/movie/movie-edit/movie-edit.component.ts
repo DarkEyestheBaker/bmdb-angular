@@ -44,6 +44,7 @@ export class MovieEditComponent implements OnInit {
       resp => {
         this.movie = resp as Movie;
         console.log('Movie updated', this.movie);
+        
         //forward to movie list component
         this.router.navigateByUrl("/movie-list");
       },

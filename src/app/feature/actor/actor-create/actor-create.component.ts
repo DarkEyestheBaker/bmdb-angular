@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Actor } from 'src/app/model/actor.class';
 import { ActorService } from 'src/app/service/actor.service';
 
