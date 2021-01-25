@@ -27,6 +27,7 @@ import { UserListComponent } from './feature/user/user-list/user-list.component'
 import { UserDetailComponent } from './feature/user/user-detail/user-detail.component';
 import { UserEditComponent } from './feature/user/user-edit/user-edit.component';
 import { UserCreateComponent } from './feature/user/user-create/user-create.component';
+import { SortPipe } from './pipe/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { UserCreateComponent } from './feature/user/user-create/user-create.comp
     UserListComponent,
     UserDetailComponent,
     UserEditComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    SortPipe
     
   ],
   imports: [

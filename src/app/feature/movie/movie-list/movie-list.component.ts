@@ -11,6 +11,10 @@ import { MovieService } from '../../../service/movie.service';
 export class MovieListComponent implements OnInit {
   title ='Movie List';
   movies: Movie[] = [];
+  sortCriteria: string = "id";
+  sortOrder: string = "asc";
+  colClasses = "btn btn-link font-weight-bold";
+
   constructor(private movieSvc: MovieService, 
               private sysSrv: SystemService) { }
 
@@ -28,6 +32,13 @@ export class MovieListComponent implements OnInit {
       }
     );
 
+  }
+  sortBy(column: string): void {
+    console.log("movie list sortBy called")
+    if(column == this.sortCriteria){
+      this.sortOrder = (this.sortOrder == "desc") ? "asc" : "desc";
+    }
+    this.sortCriteria = column;
   }
 
 }
