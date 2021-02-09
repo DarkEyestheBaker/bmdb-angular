@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <section class="heading">
-    <span class='component-title'>[{{title}}]</span>
+    <span class='component-title'>{{title}}</span>
 </section>
 <main *ngIf='actor' class="single">
     <table class="table table-sm table-striped">
@@ -25,7 +25,7 @@
                 Gender:
 
             </td>
-            <td><input [(ngModel)]="actor.gender" class="rounded" type="text" disabled>
+            <td><input [(ngModel)]="actor.gender" class="rounded" type="text">
             </td>
         </tr>
         <tr>
@@ -33,13 +33,13 @@
                 Birth Date:
                 
             </td>
-            <td><input [(ngModel)]="actor.birthDate" class="rounded" type="text" disabled>
+            <td><input [(ngModel)]="actor.birthDate" class="rounded" type="text">
             </td>
         </tr>
      
     </table>
 </main>
-<span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> |
+<span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> 
 
 <!--
   <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>

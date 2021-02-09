@@ -10,6 +10,14 @@
                 <td>{{user.id}}</td>
             </tr>
             <tr>
+                <td>User Name</td>
+                <td><input [(ngModel)]="username" class="rounded" type="text"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input [(ngModel)]="user.password" class="rounded" type="text"></td>
+            </tr>
+            <tr>
                 <td>
                     First Name:
                 </td>
@@ -44,6 +52,6 @@
     </main>
     <span>
         <button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button>
-    </span> |
+    </span> 
 
 </div>

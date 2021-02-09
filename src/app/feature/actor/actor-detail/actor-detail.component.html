@@ -4,44 +4,30 @@
         <span class="page-title font-weight-bold font-italic">{{title}}</span>
         <span>&nbsp;<a routerLink="/actor-list">Return to List</a></span>
     </section>
-    <main *ngIf = 'actor' class="single">
-        <table class="table table-sm table-striped">
+    <main class="single">
+        <table *ngIf='actor' class="table table-sm table-striped">
             <tr>
                 <td>ID</td>
                 <td>{{actor.id}}</td>
             </tr>
-            <tr><td>
-                First Name:
-            </td>
-            <td>
-                <input [(ngModel)]="actor.firstName" class="rounded" type="text">
-            </td>
-          </tr>
-          <tr>
-            <td>
-                Last Name:
-            </td>
-            <td>
-                <input [(ngModel)]="actor.lastName" class="rounded" type="text">
-            </td>
-                
-            <td>
-                <input [(ngModel)]="actor.firstName" class="rounded" type="text">
-            </td>
+            <tr>
+                <td>First Name:</td>
+                <td>{{actor.firstName}}</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>{{actor.lastName}}</td>
             <tr>
                 <td>Gender:</td>
-                <td><input [(ngModel)]="actor.gender" class="rounded" type="text" disabled></td>
+                <td>{{actor.gender}}</td>
             </tr>
             <tr>
                 <td>Birth Date:</td>
-                <td><input [(ngModel)]="actor.birthDate" class="rounded" type="text" disabled></td>
+                <td>{{actor.birthDate}}</td>
             </tr>
-         
         </table>
     </main>
     <span>
-
         <span><button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
-
     </span>
 </div>

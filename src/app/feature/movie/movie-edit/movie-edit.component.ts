@@ -17,7 +17,8 @@ export class MovieEditComponent implements OnInit {
 
   constructor(private movieSvc: MovieService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute, 
+    private loc: Location) { }
 
 
   ngOnInit(): void {

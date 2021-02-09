@@ -28,6 +28,7 @@ export class UserLoginComponent implements OnInit {
       resp => {
         if (resp == null) {
           this.msg = "Invalid username and/or password";
+          this.router.navigateByUrl('/user-create');
         }
         else {
           this.user = resp as User;
@@ -39,7 +40,7 @@ export class UserLoginComponent implements OnInit {
       },
       err => {
         console.log("User login error!!!", err);
-        this.msg = "Error during login"
+        this.msg = "Error during login."
       }
     );
   }

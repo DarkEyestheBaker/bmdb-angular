@@ -1,34 +1,36 @@
-<div class = "welcome">
-    <h1>{{title}}</h1>
-    </div>
-    <div class = "component-content">
-        <form class="text-center">
-            <table *ngIf='user' class="table-sm">
-                <tr class="text-center">
-                    <td colspan="2">Login</td>
-                </tr>
-
-                <tr>
-                    <td>Username:</td>
-                    <td><input [(ngModel)]='user.username' name='Username' type='text'>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Password:</td>
-                    <td><input [(ngModel)]='user.password' name="Password" type='password'></td>
-                </tr>
-
-                <tr>
-                    <td class="text-center" colspan="2">
-                        <button type= 'submit' (click)="login()" class="btn btn btn-primary">Login</button>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2"><label class="text-sm-left">{{msg}}</label></td>
-                </tr>
-
-            </table>
-        </form>
-    </div>
+<div align="center" class="welcome">
+    <h1 style="font-family: 'Broadway', 'Tahoma', san-serif; font-size:xxx-large" >Welcome to the Movies!</h1>
+</div>
+<div class="component-content">
+    <form class="text-center">
+        <table *ngIf='user' align="center" border="1" bgcolor="gold" padding="20" class="table-sm">
+            <tr class="text-center">
+                <td colspan="2">Login</td>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><input [(ngModel)]='user.username' name='Username' type='text'>
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input [(ngModel)]='user.password' name="Password" type='password'></td>
+            </tr>
+            <tr>
+                <td class="text-center" colspan="2">
+                    <button style=background-color:rgb(255,234,117) type='submit' (click)="login()"
+                        class="btn">Login</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label class="text-sm-left">{{msg}}</label></td>
+            </tr>
+        </table>
+    </form>
+</div>
+<body style="text-align: center;">
+    <br>
+    <br>
+<img src="../../../assets/BMDB Logo.png" alt="BMDB_Logo" class="center"
+    style="background-color: rgb(27, 25, 13); width: 550px; height: 375px">
+</body>

@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <section class = "heading">
-    <span class = "page-title font-weight-bold font italic"> [{{title}}]</span>
+    <span class = "page-title font-weight-bold font italic"> {{title}}</span>
     <a routerLink='/user-list'>
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         <tr *ngFor='let user of users'>
-            <td>{{user.userName}}</td>
+            <td>{{user.username}}</td>
             <td>{{user.lastName + ", " + user.firstName}}</td>
             <td>{{user.phoneNumber}}</td>
             <td>{{user.email}}</td>
