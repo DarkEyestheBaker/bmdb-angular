@@ -23,7 +23,12 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><label class="text-sm-left">{{msg}}</label></td>
+                <td colspan="2"><label class="text-danger">{{msg}}</label></td>
+            </tr>
+            <tr>
+                <td colspan="2" *ngIf='msg.length >0'>
+                    <a routerLink="/user-create">Click here to create new user.</a>
+                </td>
             </tr>
         </table>
     </form>

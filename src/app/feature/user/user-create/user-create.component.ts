@@ -20,6 +20,7 @@ ngOnInit(): void {
 }
 save() {
   //save the user to the DB
+  console.log("create new user:", this.user);
   this.userSvc.create(this.user).subscribe(
     resp => {
       this.user = resp as User;

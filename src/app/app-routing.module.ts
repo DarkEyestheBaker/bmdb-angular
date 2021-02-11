@@ -25,7 +25,7 @@ import { UserCreateComponent } from './feature/user/user-create/user-create.comp
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'movie-list', pathMatch: 'full' },
+  { path: '', redirectTo: 'user-login', pathMatch: 'full' },
   { path: 'movie-list', component: MovieListComponent},
   { path: 'movie-create', component: MovieCreateComponent},
   { path: 'movie-detail/:id', component: MovieDetailComponent},
