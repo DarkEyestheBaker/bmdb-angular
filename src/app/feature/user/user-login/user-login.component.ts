@@ -27,8 +27,8 @@ export class UserLoginComponent implements OnInit {
     this.userSvc.login(this.user).subscribe(
       resp => {
         if (resp == null) {
-          this.msg = "Invalid username and/or password";
-          this.router.navigateByUrl('/user-create');
+          this.msg = "Invalid username and/or password.";
+          this.router.navigateByUrl('/user-login');
         }
         else {
           this.user = resp as User;

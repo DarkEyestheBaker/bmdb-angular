@@ -43,10 +43,9 @@ export class UserDetailComponent implements OnInit {
       resp => {
         this.user = resp as User;
         console.log('User deleted', this.user);
-
         //forward to user-list component
         this.router.navigateByUrl("/user-list");
-      }
+      },
     );
   }
 }

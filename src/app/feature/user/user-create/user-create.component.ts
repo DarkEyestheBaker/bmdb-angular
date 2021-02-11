@@ -26,7 +26,7 @@ save() {
       console.log('User created', this.user);
       
       //forward to user list component
-      this.router.navigateByUrl("/movie-list");
+      this.router.navigateByUrl("/user-list");
     },
     err => {
       console.log(err);
