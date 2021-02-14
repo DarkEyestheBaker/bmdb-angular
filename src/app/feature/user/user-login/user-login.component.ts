@@ -28,7 +28,7 @@ export class UserLoginComponent implements OnInit {
       resp => {
         if (resp == null) {
           this.msg = "Invalid username and/or password.";
-          this.router.navigateByUrl('/user-login');
+          // this.router.navigateByUrl('/user-login');
         }
         else {
           this.user = resp as User;
