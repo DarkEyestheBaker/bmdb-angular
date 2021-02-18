@@ -8,16 +8,16 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Birth Date</th>
+            <!-- <th>ID</th> -->
+            <th><button [ngClass]='colClasses' (click)="sortBy('lastName')">Name</button></th>
+            <th><button [ngClass]='colClasses' (click)="sortBy('gender')">Gender</button></th>
+            <th><button [ngClass]='colClasses' (click)="sortBy('birthDate')">Birth Date</button></th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let actor of actors'>
-            <td>{{actor.id}}</td>
+        <tr *ngFor='let actor of actors | sort: sortCriteria: sortOrder'>
+            <!-- <td>{{actor.id}}</td> -->
             <td>{{actor.lastName + ", " + actor.firstName}}</td>
             <td>{{actor.gender}}</td>
             <td>{{actor.birthDate}}</td>

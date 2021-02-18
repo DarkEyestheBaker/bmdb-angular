@@ -31,7 +31,6 @@ export class MovieListComponent implements OnInit {
         console.log(err);
       }
     );
-
   }
   sortBy(column: string): void {
     console.log("movie list sortBy called")
@@ -40,5 +39,4 @@ export class MovieListComponent implements OnInit {
     }
     this.sortCriteria = column;
   }
-
 }

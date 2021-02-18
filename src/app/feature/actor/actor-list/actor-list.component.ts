@@ -12,6 +12,9 @@ import { SystemService } from 'src/app/service/system.service';
 export class ActorListComponent implements OnInit {
   title = 'Actor List';
   actors: Actor[] = [];
+  sortCriteria: string = "id";
+  sortOrder: string = "asc";
+  colClasses = "btn btn-link font-weight-bold";
   
   constructor(private actorSvc: ActorService, 
               private sysSvc: SystemService) { }
@@ -28,6 +31,14 @@ export class ActorListComponent implements OnInit {
       err => {
         console.log(err);
       }
-    )
-  };
+    );
+  }
+  sortBy(column: string): void {
+    console.log("actor list sortBy called")
+    if(column == this.sortCriteria){
+      this.sortOrder = (this.sortOrder == "desc") ? "asc" : "desc";
+    }
+    this.sortCriteria = column;
+  }
 }
+
