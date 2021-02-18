@@ -6,6 +6,9 @@ export class Credit {
     actor: Actor;
     movie: Movie;
     role: string;
+    //actorName and movieTitle are derived fields from actor (last name and first name) & movie title
+    actorName: string;
+    movieTitle: string;
 
     //only ONE constructor in javascript
     constructor(id: number = 0, 
@@ -17,5 +20,6 @@ export class Credit {
         this.actor = actor;
         this.movie = movie;
         this.role = role;
+   
     }
 }

@@ -11,6 +11,10 @@ import { CreditService } from '../../../service/credit.service';
 export class CreditListComponent implements OnInit {
   title = 'Credit List'
   credits: Credit[] = [];
+  sortCriteria: string = "id";
+  sortOrder: string = "asc";
+  colClasses = "btn btn-link font-weight-bold";
+  
  
   constructor(private creditSvc: CreditService, 
               private sysSvc: SystemService) { }
@@ -22,6 +26,10 @@ export class CreditListComponent implements OnInit {
     this.creditSvc.getAll().subscribe(
       resp => {
         this.credits = resp as Credit[];
+        for(let c of this.credits) {
+          c.actorName = c.actor.lastName + c.actor.firstName;
+          c.movieTitle = c.movie.title;
+        }
         console.log('Credits', this.credits);
       },
       err => {
@@ -30,5 +38,11 @@ export class CreditListComponent implements OnInit {
     );
 
   }
-
+sortBy(column: string): void {
+  console.log("movie list sortBy called")
+  if(column == this.sortCriteria) {
+    this.sortOrder = (this.sortOrder == "desc") ? "asc" : "desc";
+  }
+  this.sortCriteria = column;
+}
 }

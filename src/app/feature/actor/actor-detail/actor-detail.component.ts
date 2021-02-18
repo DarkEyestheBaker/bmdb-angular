@@ -13,6 +13,7 @@ export class ActorDetailComponent implements OnInit {
   title = "Actor Detail";
   actor: Actor =  null;
   actorID: number = 0;
+  msg: string = "";
 
 constructor(private actorSvc: ActorService, 
             private router: Router, 
@@ -22,7 +23,7 @@ constructor(private actorSvc: ActorService,
     // get the ID from the URL  
     this.route.params.subscribe(
         parms => {this.actorID = parms['id'];
-        console.log(this.actorID);
+        console.log("ActorID: " + this.actorID);
     }
     );
     // get actor by ID 
@@ -42,11 +43,12 @@ constructor(private actorSvc: ActorService,
       resp => {
         this.actor = resp as Actor;
         console.log('Actor deleted', this.actor);
-        //forward to movie list component
+        //forward to actor list component
         this.router.navigateByUrl("/actor-list");
       },
       err => {
         console.log(err);
+        this.msg = "Server Error - DELETE actor for id: " + this.actorID;
       }
     );
   }

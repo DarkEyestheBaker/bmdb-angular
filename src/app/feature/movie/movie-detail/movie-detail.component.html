@@ -26,11 +26,12 @@
                 <td>Director:</td>
                 <td><input [(ngModel)]="movie.director" class="rounded" type="text" disabled></td>
             </tr>
+            <tr>
+                <td colspan="2"><label class="text-danger">{{msg}}</label></td>
+            </tr>
         </table>
     </main>
     <span>
-
         <span><button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
-
     </span>
 </div>

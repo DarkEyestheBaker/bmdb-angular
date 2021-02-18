@@ -14,6 +14,7 @@ export class MovieDetailComponent implements OnInit {
   title = "Movie Detail";
   movie: Movie =  null;
   movieID: number = 0;
+  msg: string = "";
 
 constructor(private movieSvc: MovieService, 
             private router: Router, 
@@ -23,7 +24,7 @@ constructor(private movieSvc: MovieService,
     // get the ID from the URL  
     this.route.params.subscribe(
         parms => {this.movieID = parms['id'];
-        console.log(this.movieID);
+        console.log("MovieID = " + this.movieID);
     }
     );
     // get movie by ID 
@@ -34,6 +35,7 @@ constructor(private movieSvc: MovieService,
       },
       err => {
         console.log(err);
+        this.msg="Error retrieving movie for id: " + this.movieID;
       }
     );
   }
@@ -48,6 +50,7 @@ constructor(private movieSvc: MovieService,
       },
       err => {
         console.log(err);
+        this.msg="Server Error - DELETE movie for id: " + this.movieID;
       }
     );
   }
