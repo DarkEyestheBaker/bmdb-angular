@@ -9,7 +9,7 @@ import { CreditService } from '../../../service/credit.service';
   styleUrls: ['./credit-list.component.css']
 })
 export class CreditListComponent implements OnInit {
-  title = 'Credit List'
+  title = 'Credit List';
   credits: Credit[] = [];
   sortCriteria: string = "id";
   sortOrder: string = "asc";

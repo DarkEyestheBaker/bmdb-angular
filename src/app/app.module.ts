@@ -28,7 +28,9 @@ import { UserDetailComponent } from './feature/user/user-detail/user-detail.comp
 import { UserEditComponent } from './feature/user/user-edit/user-edit.component';
 import { UserCreateComponent } from './feature/user/user-create/user-create.component';
 import { SortPipe } from './pipe/sort.pipe';
+
 import { AboutComponent } from './core/about/about.component';
+
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -59,7 +61,9 @@ import { HomeComponent } from './home/home.component';
     UserEditComponent,
     UserCreateComponent,
     SortPipe,
+
     AboutComponent,
+    
     HomeComponent
     
   ],
